@@ -1,0 +1,23 @@
+﻿1. 本来环境是：
+python 3.6.2
+tensorflow是最新版本1.7.0
+anaconda3
+
+但是在安装好tensorflow之后，import tensorflow出现问题：
+import tensorflow as tf Traceback (most recent call last):
+
+  File "<ipython-input-5-41389fad42b5>", line 1, in <module>
+    import tensorflow as tf
+
+ModuleNotFoundError: No module named 'tensorflow'
+
+在网上找到问题所在：因为Windows下，python3只有python3.5支持tensorflow，所以必须先把python换为3.5版本，这里采用conda命令来换：
+conda create -n tensorflow python=3.5 anaconda
+
+版本换回3.5之后，执行激活tensorflow命令：
+activate tensorflow
+
+#其他命令：禁用命令：deactivate
+
+但是import tensorflow的时候依然报上面的错误。
+所以决定重新从anaconda里面从新安装tensorflow
